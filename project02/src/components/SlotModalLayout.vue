@@ -12,7 +12,7 @@
   </div>
 </template>
 <style scoped>
-.modal-containder {
+.modal-container {
   border: 1px solid black;
 }
 </style>

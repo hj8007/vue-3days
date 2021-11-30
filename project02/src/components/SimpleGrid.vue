@@ -1,39 +1,38 @@
 <template>
-  <div>
-    <table>
-      <thead>
-        <tr>
-          <th v-if="selectType === 'radio' || selectType === 'checkbox'"></th>
-          <th :key="i" v-for="(h, i) in headers">{{ h.title }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr :key="i" v-for="(item, i) in items">
-          <td v-if="selectType === 'radio'">
-            <input
-              type="radio"
-              :value="item[checkedKey]"
-              v-model="checkedItem"
-              @change="doChange"
-            />
-          </td>
-          <td v-else-if="selectType === 'checkbox'">
-            <input
-              type="checkbox"
-              :value="item[checkedKey]"
-              v-model="checkedItems"
-              @change="doChange"
-            />
-          </td>
-          <td :key="j" v-for="(h, j) in headers">{{ item[h['key']] }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th v-if="selectType === 'radio' || selectType === 'checkbox'"></th>
+        <th :key="i" v-for="(h, i) in headers">{{ h.title }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr :key="i" v-for="(item, i) in items">
+        <td v-if="selectType === 'radio'">
+          <input
+            type="radio"
+            :value="item[checkedKey]"
+            v-model="checkedItem"
+            @change="doChange"
+          />
+        </td>
+        <td v-else-if="selectType === 'checkbox'">
+          <input
+            type="checkbox"
+            :value="item[checkedKey]"
+            v-model="checkedItems"
+            @change="doChange"
+          />
+        </td>
+        <td :key="j" v-for="(h, j) in headers">{{ item[h['key']] }}</td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 <script>
 export default {
   name: '',
+  components: {},
   props: {
     headers: {
       type: Array,
@@ -60,7 +59,6 @@ export default {
       default: 'change-item'
     }
   },
-  components: {},
   data() {
     return {
       checkedItem: '',

@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <h1>
-      {{ title }} (<small>{{ subTitle }}</small
-      >) {{ title3 }}
-    </h1>
-  </div>
+  <h1>
+    {{ title }} (<small>{{ subTitle }}</small
+    >) {{ title3 }}
+  </h1>
 </template>
 <script>
 export default {
@@ -29,6 +27,10 @@ export default {
   created() {},
   mounted() {},
   unmounted() {},
-  methods: {}
+  methods: {
+    test() {
+      console.log('test')
+    }
+  }
 }
 </script>

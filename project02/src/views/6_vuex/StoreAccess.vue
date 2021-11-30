@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1 v-if="userInfo.name">Welcom {{ userInfo.name }}</h1>
+    <h1 v-if="userInfo.name">Welcome {{ userInfo.name }}</h1>
     <div>
-      <label for="">ID: </label>
+      <label>ID: </label>
       <input type="text" v-model="userId" v-focus />
     </div>
     <div>
-      <label for="">PASSWORD: </label>
+      <label>PASS: </label>
       <input type="password" v-model="userPw" />
     </div>
     <button @click="login">로그인</button>
@@ -19,7 +19,7 @@ export default {
   components: {},
   data() {
     return {
-      userid: '',
+      userId: '',
       userPw: ''
     }
   },

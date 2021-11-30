@@ -10,12 +10,16 @@ import VueSweetalert2 from 'vue-sweetalert2'
 import './assets/css/style.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 
+import Datepicker from 'vue3-date-time-picker'
+import 'vue3-date-time-picker/dist/main.css'
+
 const app = createApp(App)
 app.use(store)
 app.use(router)
 app.mixin(mixin)
 app.use(i18nPlugin, i18nStrings)
 app.use(VueSweetalert2)
+app.component('Datepicker', Datepicker)
 
 app.directive('focus', {
   mounted(el) {

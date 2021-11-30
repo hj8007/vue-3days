@@ -5,7 +5,8 @@ import persistedstate from 'vuex-persistedstate'
 export default createStore({
   state() {
     return {
-      user: {}
+      user: {},
+      menus: []
     }
   },
   mutations: {
@@ -15,7 +16,7 @@ export default createStore({
   },
   actions: {},
   modules: {},
-  plugin: [
+  plugins: [
     persistedstate({
       paths: ['user']
     })

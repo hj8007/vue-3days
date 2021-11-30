@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageTitle :title="title" subTitle="(매출)" ref="pagetitle" />
-    <button @click="doChange"></button>
+    <button @click="doChange">Change</button>
   </div>
 </template>
 <script>
@@ -21,6 +21,7 @@ export default {
   methods: {
     doChange() {
       this.$refs.pagetitle.title3 = '테스트 제목'
+      this.$refs.pagetitle.test()
     }
   }
 }

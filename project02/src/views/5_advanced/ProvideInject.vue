@@ -1,5 +1,6 @@
 <template>
   <div>
+    <button @click="doChange">Change</button>
     <ProvideInjectChild />
   </div>
 </template>
@@ -23,6 +24,10 @@ export default {
   created() {},
   mounted() {},
   unmounted() {},
-  methods: {}
+  methods: {
+    doChange() {
+      this.items = ['A', 'B', 'C']
+    }
+  }
 }
 </script>

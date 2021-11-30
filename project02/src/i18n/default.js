@@ -4,8 +4,8 @@ const i18nStrings = {
     search: 'Search'
   },
   ko: {
-    hi: '안녕하세요! {name}',
-    search: '검색'
+    hi: '안녕하세요! {name}. 당신의 전화번호는 {phone}',
+    search: '조회'
   }
 }
 

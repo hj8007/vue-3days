@@ -12,13 +12,36 @@ export default {
   data() {
     return {
       valueModel: 'South Korea',
-      numberModel: 0
+      numberModel: 0,
+      list: [],
+      date: null,
+      date2: null,
+      month: null,
+      time: null
     }
   },
   setup() {},
-  created() {},
-  mounted() {},
-  unmounted() {},
-  methods: {}
+  //   beforeCreate() {
+  //     console.log('beforeCreate')
+  //   },
+  created() {
+    console.log('created')
+    this.getRegionData()
+  },
+  //   beforeMount() {
+  //     console.log('beforeMount')
+  //   },
+  mounted() {
+    console.log('mounted')
+  },
+  //   beforeUpdate() {},
+  updated() {},
+  unmounted() {
+    //   this.list = null
+  },
+  methods: {
+    getRegionData() {},
+    getSomeData() {}
+  }
 }
 </script>

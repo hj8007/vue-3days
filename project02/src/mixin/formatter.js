@@ -8,7 +8,9 @@ export default {
   },
   setup() {},
   created() {},
-  mounted() {},
+  mounted() {
+    console.log('mixin mounted')
+  },
   unmounted() {},
   methods: {
     dateFormat(d, format) {
@@ -21,6 +23,7 @@ export default {
         .replace('YYYY', year)
         .replace('MM', month)
         .replace('DD', day)
+      //   YYYY-MM-DD
     }
   }
 }

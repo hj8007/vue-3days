@@ -3,9 +3,15 @@
     <input type="text" v-model="txt1" @keyup.enter="doSearch" />
     <button @click="doSearch">조회</button>
     <div>
-      <input type="text" maxlength="3" v-model="tel1" @keyup="moveTel2" />
-      <input type="text" maxlength="3" v-model="tel2" ref="tel2" />
-      <input type="text" maxlength="3" v-model="tel3" />
+      <input type="text" maxlength="3" v-model="tel1" v-move="[3, 'tel2']" />
+      <input
+        type="text"
+        maxlength="4"
+        v-model="tel2"
+        id="tel2"
+        v-move="[4, 'tel3']"
+      />
+      <input type="text" maxlength="4" v-model="tel3" id="tel3" />
     </div>
   </div>
 </template>
@@ -13,9 +19,19 @@
 export default {
   name: '',
   components: {},
+  directives: {
+    move: {
+      mounted(el, binding) {
+        el.addEventListener('keyup', () => {
+          if (el.value.length === binding.value[0]) {
+            document.getElementById(binding.value[1]).focus()
+          }
+        })
+      }
+    }
+  },
   data() {
     return {
-      sampleData: '',
       txt1: '',
       tel1: '',
       tel2: '',
@@ -35,11 +51,6 @@ export default {
         this.doSearch()
       }
       // console.log(event.keyCode)
-    },
-    moveTel2() {
-      if (this.tel1.length === 3) {
-        this.$refs.tel2.focus()
-      }
     }
   }
 }

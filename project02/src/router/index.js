@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-// import DataBindString from '../views/1_databinding/DataBindingString'
+// import DataBindingString from '../views/1_databinding/DataBindingString.vue'
 // import store from '../store'
 
 const routes = [
@@ -107,6 +107,14 @@ const routes = [
       )
   },
   {
+    path: '/databinding/userdetail',
+    name: 'UserDetail',
+    component: () =>
+      import(
+        /* webpackChunkName: "databinding", webpackPrefetch:true */ '../views/1_databinding/UserDetail.vue'
+      )
+  },
+  {
     path: '/event/click',
     name: 'EventClick',
     component: () =>
@@ -170,7 +178,6 @@ const routes = [
         /* webpackChunkName: "extra", webpackPrefetch:true */ '../views/3_extra/Watch.vue'
       )
   },
-
   {
     path: '/reuse/component1',
     name: 'ReuseComponent',
@@ -236,7 +243,7 @@ const routes = [
       )
   },
   {
-    path: '/user/create',
+    path: '/assignment/usercreate',
     name: 'UserCreate',
     component: () =>
       import(
@@ -263,8 +270,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach((to, from) => {
-  console.log('from', from)
-  console.log('to', to)
+  // console.log('from', from)
 })
 
 export default router

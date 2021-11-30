@@ -12,7 +12,7 @@ export default {
   components: {},
   data() {
     return {
-      user: { name: '아무개' }
+      user: { name: '아무개', phone: '010-0000-0000' }
     }
   },
   setup() {},

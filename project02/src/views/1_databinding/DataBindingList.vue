@@ -1,7 +1,11 @@
 <template>
   <div>
     <select>
-      <option :value="drink.drinkId" :key="i" v-for="(drink, i) in drinkList">
+      <option
+        :value="drink.drinkId"
+        :key="drink.drinkId"
+        v-for="drink in drinkList"
+      >
         {{ drink.drinkName }}
       </option>
     </select>
