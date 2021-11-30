@@ -2,27 +2,21 @@
   <div></div>
 </template>
 <script>
-// import axios from 'axios'
-
 export default {
   name: '',
   components: {},
+  inject: ['itemLength'],
   data() {
     return {
-      userList: []
+      sampleData: ''
     }
   },
   setup() {},
   created() {},
   mounted() {
-    this.getUserList()
+    console.log(this.itemLength)
   },
   unmounted() {},
-  methods: {
-    async getUserList() {
-      this.userList = await this.$get('/users')
-      console.log(this.userList)
-    }
-  }
+  methods: {}
 }
 </script>

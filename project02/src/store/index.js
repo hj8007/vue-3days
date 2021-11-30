@@ -1,12 +1,23 @@
 import { createStore } from 'vuex'
 
+import persistedstate from 'vuex-persistedstate'
+
 export default createStore({
-  state: {
+  state() {
+    return {
+      user: {}
+    }
   },
   mutations: {
+    user(state, data) {
+      state.user = data
+    }
   },
-  actions: {
-  },
-  modules: {
-  }
+  actions: {},
+  modules: {},
+  plugin: [
+    persistedstate({
+      paths: ['user']
+    })
+  ]
 })

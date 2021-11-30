@@ -2,27 +2,23 @@
   <div></div>
 </template>
 <script>
-// import axios from 'axios'
+// import Formatter from '@/mixin/formatter.js'
 
 export default {
   name: '',
+  //   mixins: [Formatter],
   components: {},
   data() {
     return {
-      userList: []
+      sampleData: ''
     }
   },
   setup() {},
   created() {},
   mounted() {
-    this.getUserList()
+    // console.log(this.dateFormat(new Date(), 'MM-DD-YYYY'))
   },
   unmounted() {},
-  methods: {
-    async getUserList() {
-      this.userList = await this.$get('/users')
-      console.log(this.userList)
-    }
-  }
+  methods: {}
 }
 </script>
