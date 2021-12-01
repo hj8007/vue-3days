@@ -11,11 +11,11 @@ export default {
       sampleData: ''
     }
   },
-  watch: {
-    itemLength(newValue) {
-      console.log('watch test', newValue)
-    }
-  },
+  // watch: {
+  //   itemLength(newValue) {
+  //     console.log('watch test', newValue)
+  //   }
+  // },
   setup() {},
   created() {},
   mounted() {
